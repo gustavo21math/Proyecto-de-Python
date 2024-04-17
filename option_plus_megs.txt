@@ -1,0 +1,11 @@
+ 
+ Para continuar, introduce: ENTERPOSITION
+ Para cambiar la palabra, introduce: ENTERWORD
+ Para consultar fichar, introduce: MYPAWNS
+ Para consultar puntos actuales, introduce: MYSCORE
+ Para consultar puntos de cada ficha, introduce: PAWNSPOINTS
+ Para obtener Ayuda con la posible palabra, introduce: HELPWORD
+ para obtener Ayuda con la posible Posicion, introduce: HELPPOS
+ Para obtener Ayuda con la Legenda, introduce: HELPLEGEND
+ Para Salir del juego, introduce: QUITGAME
+ 
