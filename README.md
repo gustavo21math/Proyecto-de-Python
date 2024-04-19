@@ -1,2 +1,4 @@
-# Proyecto-de-Python
-Juego de apalabrado 
+# Juego de Apailabrado
+ ![imagen](./apayla.png)
+## instrucciones del juego
+-- 
