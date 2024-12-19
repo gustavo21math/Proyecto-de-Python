@@ -1,5 +1,5 @@
 # Juego de Apailabrado
- ![imagen](./apayla.png)
+ ![imagen](./images/apayla.png)
 ## instrucciones del juego
  - Introduce la palabra en Mayuscula
  - La primera palabra siempre debe pasar por la coordenada central
