@@ -1,0 +1,34 @@
+# Entornos virtuales
+venv/
+.venv/
+env/
+.env/
+apilabrado/
+
+# Archivos compilados de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Carpetas de Jupyter Notebook
+.ipynb_checkpoints/
+.virtual_documents/
+
+# Carpetas de paquetes y distribución
+.eggs/
+*.egg-info
+dist/
+build/
+eggs/
+parts/
+bin/
+var/
+sdist/
+develop-eggs/
+*.egg
+
+# Archivos de configuración de IDEs
+.vscode/
+.idea/
+*.DS_Store 
