@@ -1,4 +1,3 @@
-
 class Pawns():
     def __init__(self):
         self.letters = []
@@ -10,7 +9,7 @@ class Pawns():
             self.addPawn(c)
     def createBag(self):
         import pandas as pd
-        bag = pd.read_csv("bag_of_pawns-220320-111432.csv")
+        bag = pd.read_csv("data/bag_of_pawns-220320-111432.csv")
         for l in bag.itertuples():
             self.addPawns(l[1],l[2])
   
@@ -111,7 +110,7 @@ class Word():
         return len(self.word)
 class Dictionary():
     
-    filpath = "dictionary-220320-112137.txt"
+    filpath = "data/dictionary-220320-112137.txt"
     @staticmethod
     def validateWord(word):
         with open(Dictionary.filpath,mode="r") as f:
@@ -201,11 +200,11 @@ class Board():
         Configura el multiplicador de cada casilla
         """
         import pandas as pd
-        filepath = "./multiplier_boardcsv-220320-113459.txt"
+        filepath = "data/multiplier_boardcsv-220320-113459.txt"
         multiplier = pd.read_csv(filepath)
         for row in multiplier.itertuples(): # iteramos fila a fila
             self.multiplier[row[1]][row[2]] = (row[3],row[4]) # asignamos 
-    def showBoard(self):
+    def showBoard(self, save_path="tablero.png"):
         """
         Muestra el tablero
         """
@@ -231,7 +230,7 @@ class Board():
                              [center_x+0.5,center_y+0.5],[center_x+0.5,center_y-0.5]])
             return vertex
         
-        filepath = "./xycolor_board-220320-113241.csv"
+        filepath = "data/xycolor_board-220320-113241.csv"
         xycolor = pd.read_csv(filepath)
         
         # trasformacion lineal de [-1,16] a [0,1]
@@ -467,14 +466,14 @@ def welcome():
     """
     Muestra el mensage de Bienvenida
     """
-    filepath = "./welcome_megs.txt"
+    filepath = "resources/welcome_megs.txt"
     with open(filepath,mode="r") as f:
         print(f.read())
 def instrucciones():
     """
     Muestra la reglas del Juego
     """
-    filepath = "./instrucciones_megs.txt"
+    filepath = "resources/instrucciones_megs.txt"
     with open(filepath,mode="r") as f:
         print(f.read())
 def deal7pawns():
@@ -491,7 +490,7 @@ def showOption():
     Muestra la opciones en caso de que todavía no haya palabras introducidas
     """
     global show_help
-    filepath = "./option_megs.txt"
+    filepath = "resources/option_megs.txt"
     print("¿Que deseas hacer ? ","" if show_help else "(introduce SHOWHELP para ver las opciones)")
     
     if show_help :
@@ -530,7 +529,7 @@ def showOptionsPlus():
     muestra opciones cuando se proporciona una palabra para colocar en el tablero
     """
     global show_help_plus
-    filepath = "./option_plus_megs.txt"
+    filepath = "resources/option_plus_megs.txt"
     print("¿Que deseas hacer ? ","" if show_help_plus else "(introduce SHOWHELP para ver las opciones)")
     
     if show_help_plus :
