@@ -32,6 +32,16 @@ class Pawns():
         """
         fre_show = self.getFrequency()
         fre_show.showFrequency()
+    def getPawnsString(self):
+        """
+        Devuelve las fichas y el número de veces que aparece cada ficha como string.
+        """
+        fre_show = self.getFrequency()
+        resultado = ""
+        for i in range(len(fre_show.letters)):
+            if fre_show.frequencies[i] != 0:
+                resultado += f"{fre_show.letters[i]}: {fre_show.frequencies[i]}\n"
+        return resultado
 
     def takePawn(self,c):
         """
