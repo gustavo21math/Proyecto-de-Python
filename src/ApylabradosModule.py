@@ -204,7 +204,7 @@ class Board():
         multiplier = pd.read_csv(filepath)
         for row in multiplier.itertuples(): # iteramos fila a fila
             self.multiplier[row[1]][row[2]] = (row[3],row[4]) # asignamos 
-    def showBoard(self, save_path="tablero.png"):
+    def showBoard(self, save_path="images/tablero.png"):
         """
         Muestra el tablero
         """
@@ -280,12 +280,14 @@ class Board():
                    verticalalignment = "center",horizontalalignment="center",
                    fontsize=15,transform=ax.transAxes)
             pawns_pos +=1.5
-        plt.show()
+        plt.savefig(save_path)
+        plt.close()
+        return save_path
     score = 0           
     def placeWord(self,player_pawns,word,x,y,direction):
         
         """
-        colocamos la palabre en el tablero y eliminamos la ficha de la bolsa
+        colocamos la palabra en el tablero y eliminamos la ficha de la bolsa
         """
         """
         for letter in word.word:
@@ -464,18 +466,18 @@ def startGame():
 ## la funcion del del texto de Bienvendida
 def welcome():
     """
-    Muestra el mensage de Bienvenida
+    Devuelve el mensaje de bienvenida leído desde el archivo.
     """
     filepath = "resources/welcome_megs.txt"
-    with open(filepath,mode="r") as f:
-        print(f.read())
+    with open(filepath, mode="r") as f:
+        return f.read()
 def instrucciones():
     """
-    Muestra la reglas del Juego
+    Devuelve las reglas del Juego
     """
     filepath = "resources/instrucciones_megs.txt"
     with open(filepath,mode="r") as f:
-        print(f.read())
+        return f.read()
 def deal7pawns():
     """
     Reparte 7  fichas al jugador 
@@ -693,7 +695,8 @@ def legend():
     ax.text(transformacionX(15.5),transformacionY(0.5),"x2\nLetra",
            verticalalignment = "center",horizontalalignment="center",
                    fontsize=25,transform=ax.transAxes)
-    plt.show()
+    plt.savefig('images/legend.png')
+    plt.close()
 def endGame():
     """
     finaliza partida
