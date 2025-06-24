@@ -1,6 +1,5 @@
-Instrucciones del juego :
- - Introduce la palabra en Mayuscula
- - La primera palabra siempre debe pasar por la coordenada central
- - A diferencia de la primera palabra, tienes que aprovechar alguna letra para formar la nueva
- - Solo tienes dos opciones para la direccion V (vertical) H (horizontal)
-============================================================================================
+- 🅰️ Introduce la palabra en **mayúscula**
+- 🎯 La primera palabra debe pasar por la **coordenada central**
+- 🔄 Aprovecha letras ya colocadas para formar nuevas palabras
+- ↕️ Solo puedes usar dirección **V** (vertical) o **H** (horizontal)
+---
